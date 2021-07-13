@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<conio.h>
+ void hello();
+ 
+ void javaprogramming();
+ 
+ void services();
+ 
+ void main()
+ {
+     hello();
+     javaprogramming();
+     services();
+ }
+ 
+void hello()
+ {
+     printf("Hello world \n");
+}
+ 
+void javaprogramming()
+ {
+     printf("\t java programming \n");
+ }
+ 
+ void services()
+ {
+     printf("\t\t Alive Tech services \n");
+ }
