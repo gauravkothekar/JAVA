@@ -1,0 +1,81 @@
+With static 
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Allfunction{
+    static int Num1=40;
+    static int Num2=20;
+     static int ADD()
+    {
+        int C=Num1+Num2;
+        return C;
+    }
+    static int SUB()
+    {
+        int S=Num1-Num2;
+        return S;
+    }
+    static int Mul()
+    {
+        int M=Num1*Num2;
+        return M;
+        
+    }
+    static int Div()
+    {
+        int D=Num1/Num2;
+        return D;
+    }
+    
+    public static void main(String[] args) {
+        Allfunction ab = new Allfunction();
+        System.out.println("ADD=\t"+ADD()+"\n Sub=\t"+SUB()+"\n mul=\t"+Mul()+"\n Div =\t"+Div());
+        /*System.out.println(SUB());
+        System.out.println(Mul());
+        System.out.println(Div());*/
+    }
+}
+
+
+
+without Static
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Allfunction{
+    int Num1=40;
+    int Num2=20;
+    int ADD()
+    {
+        int C=Num1+Num2;
+        return C;
+    }
+    int SUB()
+    {
+        int S=Num1-Num2;
+        return S;
+    }
+    int Mul()
+    {
+        int M=Num1*Num2;
+        return M;
+        
+    }
+    int Div()
+    {
+        int D=Num1/Num2;
+        return D;
+    }
+    
+    public static void main(String[] args) {
+        Allfunction ab = new Allfunction();
+        System.out.println("ADD=\t"+ab.ADD()+"\n Sub=\t"+ab.SUB()+"\n mul=\t"+ab.Mul()+"\n Div =\t"+ab.Div());
+        /*System.out.println(SUB());
+        System.out.println(Mul());
+        System.out.println(Div());*/
+    }
+}
+
+
+
