@@ -1,0 +1,204 @@
+
+package drive;
+
+/**
+ *
+ * @with multiple function call in main
+ */
+public class Drive 
+{
+    int current_speed;
+    String brand;
+    int starting_speed;
+    //int dis=420;
+    void start()
+    {
+        starting_speed=30;
+        System.out.println("car started driving \t starting speed is "+starting_speed);
+    }
+    void acceleration()
+    {
+        current_speed=starting_speed+30;
+        System.out.println("Current Speed after acceleration is "+current_speed);
+    }
+    void deacceleration()
+    {
+        current_speed=current_speed-30;
+        System.out.println("Current speed after deacceleration is "+current_speed);    
+    }
+    void left_turn()
+    {
+        System.out.println("take left turn"); 
+    }
+    void right_turn()
+    {
+        System.out.println("take right turn");
+    }
+    void stop()
+    {
+        current_speed=0; 
+        System.out.println("Car is destination");
+    }
+    public static void main(String[] args) 
+    {
+        Drive car=new Drive();
+        car.brand="TATA";
+        
+        car.start();
+        car.acceleration();
+        car.deacceleration();
+        car.right_turn();
+        car.acceleration();
+        car.deacceleration();
+        car.left_turn();
+        car.acceleration();
+        car.deacceleration();
+        car.right_turn();
+        car.acceleration();
+        car.deacceleration();
+        car.left_turn();
+        car.acceleration();
+        car.stop();
+        
+         
+    }
+    
+    
+}
+
+
+///// source destination
+
+
+package drive;
+
+/**
+ *
+ * @author samir
+ */
+public class Drive 
+{
+    int current_speed;
+    String brand;
+    int starting_speed;
+    //int dis=420;
+    void start()
+    {
+        System.out.println("Car brand is "+brand);
+        starting_speed=30;
+        System.out.println("\ncar started driving \t starting speed is "+starting_speed);
+        this.acceleration();
+    }
+    void acceleration()
+    {
+        current_speed=starting_speed+30;
+        System.out.println("\nCurrent Speed after acceleration is "+current_speed);
+        this.deacceleration();
+    }
+    void deacceleration()
+    {
+        current_speed=current_speed-30;
+        System.out.println("\nCurrent speed after deacceleration is "+current_speed);    
+    }
+    void left_turn()
+    {
+        System.out.println("\ntake left turn"); 
+        this.acceleration();
+    }
+    void right_turn()
+    {
+        System.out.println("\ntake right turn");
+        this.acceleration();
+    }
+    void stop()
+    {
+        this.deacceleration(); 
+        System.out.println(" \nCar reached destination");
+    }
+    public static void main(String[] args) 
+    {
+        Drive car=new Drive();
+        car.brand="TATA";
+        car.start();
+        car.right_turn();
+        car.left_turn();
+        car.right_turn();
+        car.left_turn();
+        car.stop();
+    }
+}
+ //// drive with KM
+package drive2;
+public class Drive2 
+{
+    int current_speed;
+    String brand;
+    int starting_speed;
+    static int dis=0;
+    void start()
+    {
+        System.out.println("Car brand is "+brand);
+        starting_speed=30;
+        System.out.println("\ncar started driving \t starting speed is "+starting_speed);
+    }
+    void acceleration30()
+    {
+        current_speed=starting_speed+30;
+        System.out.println("\nCurrent Speed after acceleration is "+current_speed);
+    }
+    void acceleration60()
+    {
+        current_speed=starting_speed+30;
+        System.out.println("\nCurrent Speed after acceleration is "+current_speed);
+    }
+    void deacceleration30()
+    {
+        current_speed=current_speed-30;
+        dis=dis+1;
+        System.out.println("\nCurrent speed after deacceleration is "+current_speed+"\ndistance covered  "+dis+"KM");    
+    }
+    void deacceleration60()
+    {
+        current_speed=current_speed-30;
+        dis=dis+2;
+        System.out.println("\nCurrent speed after deacceleration is "+current_speed+"\ndistance covered  "+dis+"KM");    
+    }
+    void left_turn()
+    {
+        System.out.println("\ntake left turn"); 
+        this.acceleration30();
+    }
+    void right_turn()
+    {
+        System.out.println("\ntake right turn");
+        this.acceleration60();
+    }
+    void stop()
+    {
+        System.out.println(" \nCar reached destination");
+    }
+    void totaldis()
+    {
+        System.out.println("Total Distance covered  "+dis+"KM");
+    }
+    public static void main(String args[])
+    {
+        Drive2 a= new Drive2();
+        a.brand="TATA";
+        a.start();
+        a.acceleration30();
+        a.deacceleration30();
+        a.right_turn();
+        a.deacceleration60();
+        a.left_turn();
+        a.deacceleration30();
+        a.right_turn();
+        a.deacceleration60();
+        a.left_turn();
+        a.deacceleration30();
+        a.stop();
+        a.totaldis();
+    }
+}
+   
+
