@@ -1,0 +1,46 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class car{
+    String car_brand;
+    int car_speed,car_seats;
+    int car_HP;
+    float car_M;
+    public static void main(String[] args) {
+        car BMW =new car();
+        BMW.car_brand="BMW";
+        BMW.car_speed=120;
+        BMW.car_seats=4;
+        BMW.car_HP=200;
+        BMW.car_M=17.5f;
+        
+        BMW.drive();
+        BMW.parking();
+        
+        car audi = new car();
+        audi.car_brand="audi";
+        audi.car_speed=130;
+        audi.car_seats=2;
+        audi.car_HP=250;
+        audi.car_M=12.3f;
+        
+        audi.drive();
+        audi.parking();
+        
+    }
+    void drive()
+    {
+        System.out.println("speed is "+this.car_speed+"\n\t Car is driving \t"+this.car_brand);
+    }
+    void parking()
+    {
+        this.car_range();
+        System.out.println("parking \n\n");
+    }
+    void car_range()
+    {
+        System.out.println("car range");            
+    }
+    
+    
+}
