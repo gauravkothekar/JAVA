@@ -1,0 +1,26 @@
+public class Sample 
+{
+    int id;
+    String name;
+    Sample(int i,String n)
+    {
+        id=i;
+        name=n;
+    }
+    Sample(Sample S)
+    {
+        id=S.id;
+        name=S.name;
+    }
+    void display()
+    {
+        System.out.println(id+"\t"+name);
+    }
+    public static void main(String args[])
+    {
+        Sample s1 =new Sample(20,"gaurav");
+        Sample s2= new Sample(s1);
+        s1.display();
+        s2.display();
+    }
+}
