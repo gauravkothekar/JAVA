@@ -1,0 +1,38 @@
+public class car
+{
+    int carspeed;
+    String car_name,car_color;
+    int noOfwheels,noOfseats;
+    boolean hasSunroof;
+    car(int speed,String name,String color,int wheels,int seats,boolean sunroof)
+    {
+        this.carspeed=speed;
+        this.car_name=name;
+        this.car_color=color;
+        this.noOfwheels=wheels;
+        this.noOfseats=seats;
+        this.hasSunroof=sunroof;
+    }
+    car(int speeds,String brand,String color,int Seat,boolean hasSunroof)
+    {
+        this(speeds,brand,color,4, Seat,hasSunroof);
+    }
+    int printdetails()
+    {
+        System.out.println(this.carspeed);
+        System.out.println(this.car_name);
+        System.out.println(this.car_color);
+        System.out.println(this.noOfwheels);
+        System.out.println(this.noOfseats);
+        System.out.println(this.hasSunroof);
+        return 0;
+    }
+    public static void main(String args[])
+    {
+        car c1= new car(200,"BMW","red",4,true);
+        car c2= new car(220,"audi","black",4,6,false);
+        c1.printdetails();
+        c2.printdetails();
+        
+    }
+}
