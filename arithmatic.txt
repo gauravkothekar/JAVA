@@ -1,0 +1,69 @@
+package arithmetic;
+ interface addition
+{
+    int add();
+}
+ interface subtraction
+{   
+    int sub();
+}
+ interface multiplication
+{
+    int mul();
+}
+ interface division
+{
+    int div();
+}
+ abstract class sample implements addition,subtraction,multiplication,division
+{
+    static int x,y,z;
+    static public int add(int a,int b,int c)
+     {
+        x=a;
+        y=b;
+        z=c;
+        c=a+b;
+        System.out.println("addition = "+c);
+         return 0;
+    }
+    static public int sub(int a,int b,int c) 
+    {
+         x=a;
+         y=b;
+         z=c;
+         c=a-b;
+         System.out.println("subtraction is "+c);
+        return 0;
+    }
+    static public int mul(int a,int b,int c) 
+    {
+        x=a;
+        y=b;
+        z=c;
+        c=a*b;
+        System.out.println("multiplication is "+c);
+        return 0;
+    }
+    static public int div(int a,int b,int c) 
+    {
+        x=a;
+        y=b;
+        z=c;
+        c=a/b;
+        System.out.println("division is "+c);
+        return 0;
+    }
+}
+class Arithmetic 
+{
+    public static void main(String[] args) 
+    {
+       
+         
+        };
+        
+    }
+    
+}
+S
