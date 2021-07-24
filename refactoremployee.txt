@@ -1,0 +1,79 @@
+
+class employee
+{
+    int emp_id;
+    String emp_name,emp_add;
+    double sal,salinc;
+    void Employeeincrerment(double salary,double increment)
+    {
+        salary=salary+increment;
+        System.out.println("incremented salary is "+salary);
+    }
+    void retrive()
+    {
+  		System.out.println("employee id is \t"+this.emp_id+"\nemployee name is\t"+this.emp_name+"\nemployee address\t"+this.emp_add+"\nemployee salary\t"+this.sal);
+    }
+    
+    employee(int id,String name,String address,double salary)
+    {
+    	this.emp_id=id;
+   	 	this.emp_name=name;
+    	this.emp_add=address;
+    	this.sal=salary;
+     }
+}
+class manager extends employee
+{
+	String manwork="to manage";
+	double incsal=1000;
+    manager(int id,String name,String address,double salary)
+    {
+       super(id,name,address,salary);
+    }
+    void work()
+    {
+    	System.out.println("to manage");
+    }
+}
+class developer extends employee
+{
+	double incsal=500;
+    developer(int id,String name,String address,double salary)
+    {
+          super(id,name,address,salary);
+          
+    }
+    void work()
+    {
+    	System.out.println("to Develop");
+    }
+}
+class tester extends employee
+{
+	double incsal=700;
+    tester(int id,String name,String address,double salary)
+    {
+        super(id,name,address,salary);
+		      
+    }
+    void work()
+    {
+    	System.out.println("to test");
+    }
+}
+class Company {
+    public static void main(String[] args)
+    {
+        manager m1=new manager(112,"xyz","wanadongri",1000.5);
+        developer d1= new developer(115,"abc","ram nagar",1200.5);
+        tester t1=new tester(166,"pqr","xyz",1500.5);
+         manager m2=new manager(1562,"xyz","wanadongri",1600.5);
+         m1.retrive();
+         d1.retrive();
+         t1.retrive();
+         m2.retrive();
+         m1.work();
+         d1.work();
+         t1.work();
+    }
+}
