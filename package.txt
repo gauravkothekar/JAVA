@@ -1,0 +1,33 @@
+main class
+-->
+package demopackage;
+public class Demopackage extends NewClass
+{
+    int B=40;
+    int C=A+B;
+    void print()
+    {
+        System.out.println("value of A   "+A);
+    }
+    public static void main(String[] args) 
+    {
+       Demopackage n1=new Demopackage();
+        n1.display();
+        n1.print();
+    }
+    
+}
+
+
+
+another class
+-->
+package demopackage;
+public class NewClass 
+{
+    int A=50;
+    void display()
+    {
+        System.out.println("inside display class");
+    }
+}
