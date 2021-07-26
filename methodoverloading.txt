@@ -1,0 +1,28 @@
+package overloading;
+class sample
+{
+    void area(int side)
+    {
+        int areasq=side*side;
+        System.out.println("area of square is \t"+areasq);
+    }
+    void area(float r)
+    {
+        float areacir=3.14f*r*r;
+        System.out.println("area of circle is \t"+areacir);
+    }
+    void area(int width, int height)
+    {
+        int arearec=width*height;
+        System.out.println("area of rectangle is \t"+arearec);
+    }
+}
+public class Overloading {
+    public static void main(String[] args) 
+    {
+           sample s1 = new sample();
+           s1.area(4.0f);
+           s1.area(12);
+           s1.area(20, 10);
+    }
+}
