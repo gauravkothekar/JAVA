@@ -10,19 +10,34 @@ class Customers
         this.customer_age=age;
         this.customer_salary=salary;
         this.printdetails();
-    }
-    Customers(String name,int age)
-    {
-        this(name,age,5);     
-    }
-    Customers(String name,double salary)
-    {
-        this(name,50,salary);
-        
+        this.interescalculator();
     }
     void printdetails()
     {
         System.out.println("customer name is "+this.customer_name+"\ncustomer age "+this.customer_age+"\ncustomer salary "+this.customer_salary);
+    }
+    void interescalculator()
+    {
+        if((this.customer_age>=22 && this.customer_age<=40) && (this.customer_salary>=3 && this.customer_salary<=8))
+        {
+            System.out.println(this.customer_name+"\tinterest of 8%\n");
+        }
+        else if((this.customer_age>=22 && this.customer_age<=40) && this.customer_salary>=8)
+        {
+            System.out.println(this.customer_name+"\tinteret of 11%\n");
+        }
+        else if((this.customer_age>=41 && this.customer_age<=60) && (this.customer_salary>=3 && this.customer_salary <=8))
+        {
+            System.out.println(this.customer_name+"\tinterest of 6%\n");
+        }
+        else if((this.customer_age>=41 && this.customer_age<=60) && this.customer_salary>=8)
+        {
+            System.out.println(this.customer_name+"\tinterest of 8%");
+        }
+        else
+        {
+            System.out.println("no interest ");
+        }
     }
 }
 class interest extends Customers
@@ -33,49 +48,25 @@ class interest extends Customers
     }
     interest(String name,int age)
     {
-        super(name,age,5.5);
+        this(name,age,5.5);
     }
     interest(String name,double salary)
     {
-        super(name,25,salary);
+        this(name,25,salary);
     }
    
-    void interescalculator(int age,double salary)
-    {
-        super.customer_age=age;
-        super.customer_salary=salary;
-        if((age>=22 && age<=40) && (salary>=3 && salary<=8))
-        {
-            System.out.println(this.customer_name+"\tinterest of 8%\n");
-        }
-        else if((age>=22 && age<=40) && salary>=8)
-        {
-            System.out.println(this.customer_name+"\tinteret of 11%\n");
-        }
-        else if((age>=41 && age<=60) && (salary>=3 && salary <=8))
-        {
-            System.out.println(this.customer_name+"\tinterest of 6%\n");
-        }
-        else if((age>=41 && age<=60) && salary>=8)
-        {
-            System.out.println(this.customer_name+"\tinterest of 8%");
-        }
-        else
-        {
-            System.out.println("no interest ");
-        }
-    }
+    
 }
 public class Bank 
 {
     public static void main(String[] args) 
     {
         interest i=new interest("abc",30,4);
-        i.interescalculator(30,4);
+        
         interest i1= new  interest("pqr",4.5);
-        i1.interescalculator(25,4.5);
+       
         interest i2= new interest("xyz",50);
-        i2.interescalculator(50,5);
+    
     }
     
 }
