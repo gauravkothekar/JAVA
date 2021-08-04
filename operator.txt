@@ -1,0 +1,36 @@
+*** operator
+package all_in_one;
+
+public class arithmatic 
+{
+	int a=10,b=20;
+	void f1()
+	{
+		System.out.println(a+b);
+		System.out.println(a*b);
+		System.out.println(a);
+		System.out.println(++a);
+		System.out.println(a%b);
+		System.out.println(a<b);
+		System.out.println(a>b);
+		System.out.println(a=b);
+		System.out.println(a==b);
+		System.out.println(a);
+		System.out.println(++b);
+		System.out.println(a++);
+	}
+}
+*** main class
+
+package all_in_one;
+
+public class executor 
+{
+	public static void main(String[] args) 
+	{
+		//BMICAL b1= new BMICAL();
+		//b1.body_mass_index();
+		arithmatic a1=new arithmatic();
+		a1.f1();
+	}
+}

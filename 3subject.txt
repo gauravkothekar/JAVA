@@ -1,0 +1,75 @@
+*** 3 subject marks input average ,pass or fail 
+package all_in_one;
+
+import java.util.Scanner;
+
+public class Scorecard 
+{
+	Scanner s1=new Scanner(System.in);
+	{
+		System.out.println("marks of physics\t");
+	}
+	float phy=s1.nextFloat();
+	{
+		System.out.println("marks of chemistry\t");
+	}
+	float che=s1.nextFloat();
+	{
+		System.out.println("marks of maths\t");
+	}
+	float maths=s1.nextFloat();	
+	public void marksheet()
+	{
+		float c=phy+che+maths;
+		float grade=(float)((c/300)*100);
+		
+		
+		//pass or fail onthe base of sub individual marks
+		if(phy>=35 && che>=35 && maths>=35)
+		{
+			System.out.println("pass");
+		}
+		else
+		{
+			System.out.println("fail");
+		}
+		
+		
+		//grade on the base of percentages 
+		if(grade>=65)
+		{
+			System.out.println("A Grade\t"+grade);
+		}
+		else if(grade>=50)
+		{
+			System.out.println("B Grade\t"+grade);
+		}
+		else if(grade>=35)
+		{
+			System.out.println("C Grade\t"+grade);
+		}
+		else
+		{
+			System.out.println("fail"+grade);
+		}
+	}
+	void print_average()
+	{
+		float Avg=(phy+che+maths)/3;
+		System.out.println("Average of all subject is\t"+Avg);
+	}
+}
+
+*** main class
+
+package all_in_one;
+
+public class executor 
+{
+	public static void main(String[] args) 
+	{
+		Scorecard s1 =new Scorecard();
+		s1.marksheet();
+		s1.print_average();
+	}
+}
