@@ -1,14 +1,14 @@
+import java.util.Arrays;
 
 public class first_lastSorted_array 
 {
 
 	public static void main(String[] args) 
 	{
-	 int nums[]= {5,7,7,8,8,10};
-	 int target =7;
+	 int nums[]= {5,7,7,8,8,8,8,10};
+	 int target =8;
 	 int arr[]=BinarySearch(nums, target);
-	 System.out.println(arr[0]+" "+arr[1]);
-
+	 System.out.println(Arrays.toString(arr));
 	}
 	static int[] BinarySearch(int[] nums, int target) 
 	{
